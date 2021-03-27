@@ -1,0 +1,2 @@
+# SmartTrashCan
+Hail Hakathon

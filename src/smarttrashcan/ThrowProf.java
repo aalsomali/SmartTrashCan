@@ -29,6 +29,8 @@ public class ThrowProf extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         contactUs = new javax.swing.JLabel();
+        profile = new javax.swing.JLabel();
+        signout = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
@@ -45,6 +47,19 @@ public class ThrowProf extends javax.swing.JFrame {
         });
         jPanel1.add(contactUs);
         contactUs.setBounds(320, 10, 70, 30);
+
+        profile.setText("Profile");
+        jPanel1.add(profile);
+        profile.setBounds(220, 10, 41, 30);
+
+        signout.setText("Sign Out");
+        signout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signoutMouseClicked(evt);
+            }
+        });
+        jPanel1.add(signout);
+        signout.setBounds(160, 10, 49, 30);
 
         about.setText("About");
         about.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,6 +103,11 @@ public class ThrowProf extends javax.swing.JFrame {
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
 
+    private void signoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signoutMouseClicked
+        this.dispose();
+       new Login().setVisible(true);
+    }//GEN-LAST:event_signoutMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -128,5 +148,7 @@ public class ThrowProf extends javax.swing.JFrame {
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel profile;
+    private javax.swing.JLabel signout;
     // End of variables declaration//GEN-END:variables
 }

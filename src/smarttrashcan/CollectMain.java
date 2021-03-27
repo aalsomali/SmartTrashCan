@@ -28,6 +28,8 @@ public class CollectMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        profile = new javax.swing.JLabel();
+        signout = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
@@ -36,6 +38,24 @@ public class CollectMain extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(390, 844));
         jPanel1.setLayout(null);
+
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jPanel1.add(profile);
+        profile.setBounds(220, 10, 41, 30);
+
+        signout.setText("Sign Out");
+        signout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signoutMouseClicked(evt);
+            }
+        });
+        jPanel1.add(signout);
+        signout.setBounds(160, 10, 49, 30);
 
         contactUs.setText("Contact Us");
         contactUs.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,6 +108,16 @@ public class CollectMain extends javax.swing.JFrame {
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
 
+    private void signoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signoutMouseClicked
+       this.dispose();
+       new Login().setVisible(true);
+    }//GEN-LAST:event_signoutMouseClicked
+
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+       this.dispose();
+        new CollectProf().setVisible(true);
+    }//GEN-LAST:event_profileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -128,5 +158,7 @@ public class CollectMain extends javax.swing.JFrame {
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel profile;
+    private javax.swing.JLabel signout;
     // End of variables declaration//GEN-END:variables
 }

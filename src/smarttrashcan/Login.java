@@ -15,6 +15,9 @@ public class Login extends javax.swing.JFrame {
      * Creates new form Login
      */
     public int per = 50;
+    String un;
+    String pssw;
+    public boolean flag = false;
     public Login() {
         initComponents();
         errormsg.setVisible(false);
@@ -140,20 +143,24 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_contactUsMouseClicked
 
     private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
-       if(userName.getText().equalsIgnoreCase("throw") && password.getText().equalsIgnoreCase("123")){
+       un = userName.getText();
+       pssw = password.getText();
+        
+        if(un.equalsIgnoreCase("throw") && pssw.equalsIgnoreCase("123")){
            this.dispose();
+           setFlag(true);
            new ThrowMain().setVisible(true);
            
-           ThrowProf tp = new ThrowProf();
-           tp.setUserName("throw");
-           tp.setPassword("123");
-       }else if(userName.getText().equalsIgnoreCase("collect") && password.getText().equalsIgnoreCase("123")){
+//           ThrowProf tp = new ThrowProf();
+//           tp.setUserName("throw");
+//           tp.setPassword("123");
+       }else if(un.equalsIgnoreCase("collect") && pssw.equalsIgnoreCase("123")){
            this.dispose();
            new CollectMain().setVisible(true);
            
-           CollectProf cp = new CollectProf();
-           cp.setUserName("collect");
-           cp.setPassword("123");
+//           CollectProf cp = new CollectProf();
+//           cp.setUserName("collect");
+//           cp.setPassword("123");
        }else{
            errormsg.setVisible(true);
        }
@@ -199,6 +206,22 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
+    public String getUserName(){
+        return un;
+    }
+    
+    public String getPassWord(){
+        return pssw;
+    }
+    
+    public void setFlag(boolean f){
+        flag = f;
+    }
+    
+    public boolean getFlag(){
+        return flag;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel UserPic;
     private javax.swing.JLabel about;

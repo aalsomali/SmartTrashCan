@@ -18,6 +18,7 @@ public class HailMall extends javax.swing.JFrame {
     public HailMall() {
         initComponents();
         per = Integer.parseInt(number.getText());
+        System.out.println(per);
     }
 
     /**
@@ -202,9 +203,11 @@ public class HailMall extends javax.swing.JFrame {
             hml.setVisible(true);
             
         } 
-        else{
+        else {
             new NotFullNotif().setVisible(true);
         }
+        
+        System.out.println(per);
     }//GEN-LAST:event_locButton1MouseClicked
 
     /**

@@ -89,6 +89,7 @@ public class NotFullNotif extends javax.swing.JFrame {
 
     private void OkButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OkButton1MouseClicked
         this.dispose();
+        new CollectMain().setVisible(true);
     }//GEN-LAST:event_OkButton1MouseClicked
 
     /**

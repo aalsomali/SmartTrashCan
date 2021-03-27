@@ -108,7 +108,7 @@ public class HailHosp extends javax.swing.JFrame {
         jLabel9.setBounds(321, 40, 50, 20);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 210, 390, 100);
+        jPanel2.setBounds(0, 210, 390, 0);
 
         jPanel3.setMaximumSize(new java.awt.Dimension(390, 310));
         jPanel3.setPreferredSize(new java.awt.Dimension(390, 310));
@@ -127,6 +127,11 @@ public class HailHosp extends javax.swing.JFrame {
         jLabel2.setBounds(10, 660, 70, 30);
 
         locButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/go to location.jpg"))); // NOI18N
+        locButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                locButtonMouseClicked(evt);
+            }
+        });
         jPanel1.add(locButton);
         locButton.setBounds(100, 710, 180, 70);
 
@@ -186,6 +191,25 @@ public class HailHosp extends javax.swing.JFrame {
 
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
+
+    private void locButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_locButtonMouseClicked
+       if(per>=90){
+            this.dispose();
+            HailHospLoc hhl = new HailHospLoc();
+            hhl.setVisible(true);
+            
+        } 
+        else{
+            NotFullNotif nfn = new NotFullNotif();
+            nfn.setVisible(true);
+            if(nfn.isVisible()==false)
+            this.dispose();
+            }
+                
+        
+       
+       
+    }//GEN-LAST:event_locButtonMouseClicked
 
     /**
      * @param args the command line arguments

@@ -15,10 +15,15 @@ public class ThrowProf extends javax.swing.JFrame {
      * Creates new form ThrowProf
      */
     
-    String set = " ";
-    
+    Login log = new Login();
     public ThrowProf() {
         initComponents();
+        userName.setText("throw");
+        password.setText("123");
+        points.setText("90");
+        
+        System.out.println(log.getFlag());
+        
     }
 
     /**

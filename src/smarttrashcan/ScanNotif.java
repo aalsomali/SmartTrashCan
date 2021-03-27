@@ -14,6 +14,12 @@ public class ScanNotif extends javax.swing.JFrame {
     /**
      * Creates new form ScanNotif
      */
+    HailMallLoc hm = new HailMallLoc();
+    GrandMallLoc gm = new GrandMallLoc();
+    
+    HailHospLoc hh = new HailHospLoc();
+    PriceParkLoc pp = new PriceParkLoc();
+    
     public ScanNotif() {
         initComponents();
     }
@@ -58,11 +64,6 @@ public class ScanNotif extends javax.swing.JFrame {
         Allow.setBackground(new java.awt.Color(228, 253, 192));
         Allow.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Allow.setText("Allow");
-        Allow.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
-            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
-                AllowMouseWheelMoved(evt);
-            }
-        });
         Allow.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 AllowMouseClicked(evt);
@@ -87,11 +88,22 @@ public class ScanNotif extends javax.swing.JFrame {
 
     private void AllowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AllowMouseClicked
         this.dispose();
+        CollectMain c = new CollectMain();
+        
+        if(hm.isVisible()==true){
+            c.setHMColor();
+            c.setVisible(true);
+        } else if(gm.isVisible()==true){
+            c.setGMColor();
+            c.setVisible(true);
+        } else if(hh.isVisible()==true){
+            c.setHHColor();
+            c.setVisible(true);
+        } else if(pp.isVisible()==true){
+            c.setPPColor();
+            c.setVisible(true);
+                }
     }//GEN-LAST:event_AllowMouseClicked
-
-    private void AllowMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_AllowMouseWheelMoved
-        this.dispose();
-    }//GEN-LAST:event_AllowMouseWheelMoved
 
     /**
      * @param args the command line arguments

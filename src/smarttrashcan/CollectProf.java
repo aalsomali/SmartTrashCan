@@ -16,6 +16,8 @@ public class CollectProf extends javax.swing.JFrame {
      */
     public CollectProf() {
         initComponents();
+        userName.setText("collect");
+        password.setText("123");
     }
 
     /**

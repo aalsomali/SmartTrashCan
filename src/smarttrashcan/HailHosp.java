@@ -14,8 +14,11 @@ public class HailHosp extends javax.swing.JFrame {
     /**
      * Creates new form HailHosp
      */
+    int per;
+    
     public HailHosp() {
         initComponents();
+         per = Integer.parseInt(number.getText());
     }
 
     /**
@@ -219,6 +222,11 @@ public class HailHosp extends javax.swing.JFrame {
         });
     }
 
+    public int getPercent(){
+        
+        return per;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;

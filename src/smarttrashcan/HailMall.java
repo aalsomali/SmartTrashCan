@@ -17,6 +17,7 @@ public class HailMall extends javax.swing.JFrame {
     int per;
     public HailMall() {
         initComponents();
+        per = Integer.parseInt(number.getText());
     }
 
     /**
@@ -109,7 +110,7 @@ public class HailMall extends javax.swing.JFrame {
         jLabel5.setBounds(321, 40, 50, 20);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 210, 390, 100);
+        jPanel2.setBounds(0, 210, 390, 0);
 
         jPanel3.setMaximumSize(new java.awt.Dimension(390, 310));
         jPanel3.setPreferredSize(new java.awt.Dimension(390, 310));
@@ -128,6 +129,11 @@ public class HailMall extends javax.swing.JFrame {
         jLabel2.setBounds(10, 660, 70, 30);
 
         locButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/go to location.jpg"))); // NOI18N
+        locButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                locButton1MouseClicked(evt);
+            }
+        });
         jPanel1.add(locButton1);
         locButton1.setBounds(100, 710, 180, 70);
 
@@ -188,6 +194,19 @@ public class HailMall extends javax.swing.JFrame {
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
 
+    private void locButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_locButton1MouseClicked
+       
+        if(per>=90){
+            this.dispose();
+            HailMallLoc hml = new HailMallLoc();
+            hml.setVisible(true);
+            
+        } 
+        else{
+            new NotFullNotif().setVisible(true);
+        }
+    }//GEN-LAST:event_locButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -225,6 +244,11 @@ public class HailMall extends javax.swing.JFrame {
     
     public void setPercent(int percent){
         per = percent;
+    }
+    
+    public int getPercent(){
+        
+        return per;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

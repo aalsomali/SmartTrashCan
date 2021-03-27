@@ -5,18 +5,30 @@
  */
 package smarttrashcan;
 
-/**
- *
- * @author milo
- */
+import java.awt.Color;
+
+
 public class CollectMain extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CollectMain
-     */
+     
+    HailMall hm = new HailMall();
+    HailHosp hh = new HailHosp();
+    PrincePark pp = new PrincePark();
+    GrandMall gm = new GrandMall();
+    
     int per;
     public CollectMain() {
         initComponents();
+        
+        if(hm.getPercent()>=90)
+            hailMall.setForeground(Color.red);
+        if(hh.getPercent()>=90)
+            hailHosp.setForeground(Color.red);
+        if(pp.getPercent()>=90)
+            park.setForeground(Color.red);
+        if(gm.getPercent()>=90)
+            grand.setForeground(Color.red);
+        
     }
 
     /**
@@ -36,16 +48,16 @@ public class CollectMain extends javax.swing.JFrame {
         mapIcon = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        hailMall = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        park = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        grand = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        hailHosp = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
@@ -108,10 +120,10 @@ public class CollectMain extends javax.swing.JFrame {
         });
         jPanel2.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel3.setText("Hail Mall");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(20, 30, 100, 30);
+        hailMall.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        hailMall.setText("Hail Mall");
+        jPanel2.add(hailMall);
+        hailMall.setBounds(20, 30, 100, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("2.1 km");
@@ -130,10 +142,10 @@ public class CollectMain extends javax.swing.JFrame {
         });
         jPanel3.setLayout(null);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel5.setText("Prince Saud Bin Abdul Mohsen Park");
-        jPanel3.add(jLabel5);
-        jLabel5.setBounds(20, 20, 260, 50);
+        park.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        park.setText("Prince Saud Bin Abdul Mohsen Park");
+        jPanel3.add(park);
+        park.setBounds(20, 20, 260, 50);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel8.setText("6.4 km");
@@ -152,10 +164,10 @@ public class CollectMain extends javax.swing.JFrame {
         });
         jPanel4.setLayout(null);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel6.setText("Grand Mall");
-        jPanel4.add(jLabel6);
-        jLabel6.setBounds(20, 30, 110, 40);
+        grand.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        grand.setText("Grand Mall");
+        jPanel4.add(grand);
+        grand.setBounds(20, 30, 110, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel7.setText("11 km");
@@ -174,10 +186,10 @@ public class CollectMain extends javax.swing.JFrame {
         });
         jPanel5.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel4.setText("Hail General Hospital");
-        jPanel5.add(jLabel4);
-        jLabel4.setBounds(20, 40, 180, 30);
+        hailHosp.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        hailHosp.setText("Hail General Hospital");
+        jPanel5.add(hailHosp);
+        hailHosp.setBounds(20, 40, 180, 30);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel9.setText("4.6 km");
@@ -288,17 +300,32 @@ public class CollectMain extends javax.swing.JFrame {
     public void setPercent(int percent){
         per = percent;
     }
+    
+    public void setHMColor(){
+        hailMall.setForeground(Color.black);
+    }
+    
+    public void setHHColor(){
+        hailHosp.setForeground(Color.black);
+    }
+    
+    public void setPPColor(){
+        park.setForeground(Color.black);
+    }
+    
+    public void setGMColor(){
+        grand.setForeground(Color.black);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
+    private javax.swing.JLabel grand;
+    private javax.swing.JLabel hailHosp;
+    private javax.swing.JLabel hailMall;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -308,6 +335,7 @@ public class CollectMain extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel mapIcon;
+    private javax.swing.JLabel park;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;
     // End of variables declaration//GEN-END:variables

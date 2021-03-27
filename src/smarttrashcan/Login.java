@@ -143,9 +143,17 @@ public class Login extends javax.swing.JFrame {
        if(userName.getText().equalsIgnoreCase("throw") && password.getText().equalsIgnoreCase("123")){
            this.dispose();
            new ThrowMain().setVisible(true);
+           
+           ThrowProf tp = new ThrowProf();
+           tp.setUserName("throw");
+           tp.setPassword("123");
        }else if(userName.getText().equalsIgnoreCase("collect") && password.getText().equalsIgnoreCase("123")){
            this.dispose();
            new CollectMain().setVisible(true);
+           
+           CollectProf cp = new CollectProf();
+           cp.setUserName("collect");
+           cp.setPassword("123");
        }else{
            errormsg.setVisible(true);
        }
@@ -187,7 +195,6 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
-                
             }
         });
     }

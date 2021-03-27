@@ -14,8 +14,11 @@ public class PrincePark extends javax.swing.JFrame {
     /**
      * Creates new form PrincePark
      */
+    int per;
+    
     public PrincePark() {
         initComponents();
+         per = Integer.parseInt(number.getText());
     }
 
     /**
@@ -231,6 +234,11 @@ public class PrincePark extends javax.swing.JFrame {
         });
     }
 
+    public int getPercent(){
+        
+        return per;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;

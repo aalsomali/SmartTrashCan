@@ -14,6 +14,9 @@ public class ThrowProf extends javax.swing.JFrame {
     /**
      * Creates new form ThrowProf
      */
+    
+    String set = " ";
+    
     public ThrowProf() {
         initComponents();
     }
@@ -219,6 +222,19 @@ public class ThrowProf extends javax.swing.JFrame {
         });
     }
     
+    public void setUserName(String s){
+        userName.setText(s);
+        System.out.println(s);
+    }
+    
+    public void setPassword(String s){
+        password.setText(s);
+        System.out.println(s);
+    }
+    
+    public void setPoints(int point){
+        points.setText(String.valueOf(point));
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

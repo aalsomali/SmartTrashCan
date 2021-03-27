@@ -36,6 +36,8 @@ public class CollectProf extends javax.swing.JFrame {
         UserPic = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        userName = new javax.swing.JLabel();
+        password = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,6 +96,14 @@ public class CollectProf extends javax.swing.JFrame {
         jLabel3.setText("Password:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(30, 430, 70, 16);
+
+        userName.setText(" ");
+        jPanel1.add(userName);
+        userName.setBounds(120, 380, 100, 20);
+
+        password.setText(" ");
+        jPanel1.add(password);
+        password.setBounds(120, 430, 100, 16);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -173,6 +183,14 @@ public class CollectProf extends javax.swing.JFrame {
         });
     }
 
+    public void setUserName(String s){
+        userName.setText(s);
+    }
+    
+    public void setPassword(String s){
+        password.setText(s);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel UserPic;
     private javax.swing.JLabel about;
@@ -182,7 +200,9 @@ public class CollectProf extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel password;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;
+    private javax.swing.JLabel userName;
     // End of variables declaration//GEN-END:variables
 }

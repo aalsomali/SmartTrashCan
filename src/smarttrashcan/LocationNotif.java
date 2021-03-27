@@ -90,6 +90,7 @@ public class LocationNotif extends javax.swing.JFrame {
 
     private void AllowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AllowMouseClicked
         this.dispose();
+        new UserType().setVisible(true);
     }//GEN-LAST:event_AllowMouseClicked
 
     /**

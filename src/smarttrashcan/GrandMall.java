@@ -18,7 +18,7 @@ public class GrandMall extends javax.swing.JFrame {
     
     public GrandMall() {
         initComponents();
-        number.setText(String.valueOf(per));
+        per = Integer.parseInt(number.getText());
     }
 
     /**
@@ -223,6 +223,11 @@ public class GrandMall extends javax.swing.JFrame {
     
     public void setPercent(int percent){
         per = percent;
+    }
+    
+    public int getPercent(){
+        
+        return per;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

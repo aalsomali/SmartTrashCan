@@ -30,9 +30,9 @@ public class NotFullNotif extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         OkButton = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(228, 253, 192));
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        OkButton1 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(228, 253, 192));
         jPanel1.setLayout(null);
@@ -48,19 +48,48 @@ public class NotFullNotif extends javax.swing.JFrame {
         jPanel1.add(OkButton);
         OkButton.setBounds(120, 120, 90, 40);
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(228, 253, 192));
+
+        jPanel2.setBackground(new java.awt.Color(228, 253, 192));
+        jPanel2.setPreferredSize(new java.awt.Dimension(341, 211));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("Trash Can is Not Full Yet!");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(30, 60, 290, 29);
+
+        OkButton1.setBackground(new java.awt.Color(228, 253, 192));
+        OkButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        OkButton1.setText("OK");
+        OkButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OkButton1MouseClicked(evt);
+            }
+        });
+        jPanel2.add(OkButton1);
+        OkButton1.setBounds(120, 120, 90, 40);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void OkButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OkButton1MouseClicked
+        this.dispose();
+    }//GEN-LAST:event_OkButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -99,7 +128,10 @@ public class NotFullNotif extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton OkButton;
+    private javax.swing.JButton OkButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

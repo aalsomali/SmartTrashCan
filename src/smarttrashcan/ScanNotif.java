@@ -86,11 +86,11 @@ public class ScanNotif extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AllowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AllowMouseClicked
-        
+        this.dispose();
     }//GEN-LAST:event_AllowMouseClicked
 
     private void AllowMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_AllowMouseWheelMoved
-        
+        this.dispose();
     }//GEN-LAST:event_AllowMouseWheelMoved
 
     /**

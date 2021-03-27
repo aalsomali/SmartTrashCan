@@ -38,7 +38,6 @@ public class MainPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(390, 844));
-        setPreferredSize(new java.awt.Dimension(390, 844));
         setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(390, 844));
@@ -76,8 +75,6 @@ public class MainPage extends javax.swing.JFrame {
         logo.setBounds(60, 210, 270, 280);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
-        bg.setMaximumSize(new java.awt.Dimension(390, 844));
-        bg.setPreferredSize(new java.awt.Dimension(390, 844));
         jPanel1.add(bg);
         bg.setBounds(0, 0, 390, 844);
         bg.getAccessibleContext().setAccessibleName("bg");

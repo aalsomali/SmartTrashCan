@@ -33,7 +33,6 @@ public class FullNotif extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(341, 211));
-        setPreferredSize(new java.awt.Dimension(341, 211));
 
         jPanel1.setBackground(new java.awt.Color(228, 253, 192));
         jPanel1.setPreferredSize(new java.awt.Dimension(341, 211));
@@ -47,6 +46,11 @@ public class FullNotif extends javax.swing.JFrame {
         OkButton.setBackground(new java.awt.Color(228, 253, 192));
         OkButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         OkButton.setText("OK");
+        OkButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OkButtonMouseClicked(evt);
+            }
+        });
         jPanel1.add(OkButton);
         OkButton.setBounds(120, 120, 90, 40);
 
@@ -63,6 +67,10 @@ public class FullNotif extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void OkButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OkButtonMouseClicked
+       this.dispose();
+    }//GEN-LAST:event_OkButtonMouseClicked
 
     /**
      * @param args the command line arguments

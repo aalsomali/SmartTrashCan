@@ -85,7 +85,6 @@ public class ScanPerm extends javax.swing.JFrame {
 
     private void allowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_allowMouseClicked
         this.dispose();
-        new ThrowMain().setVisible(true);
     }//GEN-LAST:event_allowMouseClicked
 
     /**

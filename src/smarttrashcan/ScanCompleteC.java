@@ -135,7 +135,6 @@ public class ScanCompleteC extends javax.swing.JFrame {
 
     private void contactUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsMouseClicked
         this.dispose();
-
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
 

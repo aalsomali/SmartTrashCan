@@ -117,10 +117,10 @@ public class MainPage extends javax.swing.JFrame {
 
     private void startButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startButtonMouseClicked
        
-//        final JOptionPane optionPane = new JOptionPane("Allow \"Smart Trash Can\" to access your location while you are using the app?", JOptionPane.QUESTION_MESSAGE, JOptionPane.YES_NO_OPTION);
-//        optionPane.setVisible(true);
-        this.dispose();
-        new UserType().setVisible(true);
+        LocationNotif ln = new LocationNotif();
+        ln.setVisible(true);
+        if(ln.isVisible()==false)
+            this.dispose();
        
     }//GEN-LAST:event_startButtonMouseClicked
 

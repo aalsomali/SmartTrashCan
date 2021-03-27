@@ -5,20 +5,17 @@
  */
 package smarttrashcan;
 
-import java.util.Random;
-
 /**
  *
  * @author milo
  */
-public class GrandMall extends javax.swing.JFrame {
+public class GrandMallLoc extends javax.swing.JFrame {
 
-   
-    int per;
-    
-    public GrandMall() {
+    /**
+     * Creates new form GrandMallLoc
+     */
+    public GrandMallLoc() {
         initComponents();
-        number.setText(String.valueOf(per));
     }
 
     /**
@@ -31,10 +28,11 @@ public class GrandMall extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        signout = new javax.swing.JLabel();
-        profile = new javax.swing.JLabel();
-        about = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
+        about = new javax.swing.JLabel();
+        profile = new javax.swing.JLabel();
+        signout = new javax.swing.JLabel();
         mapIcon = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -42,10 +40,9 @@ public class GrandMall extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        locButton = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         number = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        locButton = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,23 +50,18 @@ public class GrandMall extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(390, 844));
         jPanel1.setLayout(null);
 
-        signout.setText("Sign Out");
-        signout.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signoutMouseClicked(evt);
-            }
-        });
-        jPanel1.add(signout);
-        signout.setBounds(160, 10, 49, 30);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 10, 80, 40);
 
-        profile.setText("Profile");
-        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+        contactUs.setText("Contact Us");
+        contactUs.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                profileMouseClicked(evt);
+                contactUsMouseClicked(evt);
             }
         });
-        jPanel1.add(profile);
-        profile.setBounds(220, 10, 41, 30);
+        jPanel1.add(contactUs);
+        contactUs.setBounds(320, 10, 70, 30);
 
         about.setText("About");
         about.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,14 +72,23 @@ public class GrandMall extends javax.swing.JFrame {
         jPanel1.add(about);
         about.setBounds(270, 10, 41, 30);
 
-        contactUs.setText("Contact Us");
-        contactUs.addMouseListener(new java.awt.event.MouseAdapter() {
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                contactUsMouseClicked(evt);
+                profileMouseClicked(evt);
             }
         });
-        jPanel1.add(contactUs);
-        contactUs.setBounds(320, 10, 70, 30);
+        jPanel1.add(profile);
+        profile.setBounds(220, 10, 41, 30);
+
+        signout.setText("Sign Out");
+        signout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signoutMouseClicked(evt);
+            }
+        });
+        jPanel1.add(signout);
+        signout.setBounds(160, 10, 49, 30);
 
         mapIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mask Group 2.jpg"))); // NOI18N
         jPanel1.add(mapIcon);
@@ -125,23 +126,19 @@ public class GrandMall extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(10, 660, 70, 30);
 
-        locButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/go to location.jpg"))); // NOI18N
-        jPanel1.add(locButton);
-        locButton.setBounds(100, 710, 180, 70);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(20, 10, 80, 40);
-
         number.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         number.setText("90");
         jPanel1.add(number);
         number.setBounds(90, 660, 40, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("%");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(140, 670, 41, 16);
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("%");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(140, 670, 41, 16);
+
+        locButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Scan.jpg"))); // NOI18N
+        jPanel1.add(locButton);
+        locButton.setBounds(100, 710, 180, 70);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -163,15 +160,11 @@ public class GrandMall extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void signoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signoutMouseClicked
+    private void contactUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsMouseClicked
         this.dispose();
-        new Login().setVisible(true);
-    }//GEN-LAST:event_signoutMouseClicked
 
-    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
-        this.dispose();
-        new ThrowProf().setVisible(true);
-    }//GEN-LAST:event_profileMouseClicked
+        new ContactUs().setVisible(true);
+    }//GEN-LAST:event_contactUsMouseClicked
 
     private void aboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseClicked
         this.dispose();
@@ -180,11 +173,15 @@ public class GrandMall extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_aboutMouseClicked
 
-    private void contactUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsMouseClicked
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         this.dispose();
+        new ThrowProf().setVisible(true);
+    }//GEN-LAST:event_profileMouseClicked
 
-        new ContactUs().setVisible(true);
-    }//GEN-LAST:event_contactUsMouseClicked
+    private void signoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signoutMouseClicked
+        this.dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_signoutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -203,35 +200,31 @@ public class GrandMall extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GrandMallLoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GrandMallLoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GrandMallLoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GrandMallLoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GrandMall().setVisible(true);
+                new GrandMallLoc().setVisible(true);
             }
         });
-    }
-    
-    public void setPercent(int percent){
-        per = percent;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

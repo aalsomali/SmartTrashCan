@@ -32,6 +32,17 @@ public class ThrowProf extends javax.swing.JFrame {
         profile = new javax.swing.JLabel();
         signout = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        UserPic = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        msg1 = new javax.swing.JLabel();
+        msg2 = new javax.swing.JLabel();
+        prizeButton = new javax.swing.JLabel();
+        points = new javax.swing.JLabel();
+        password = new javax.swing.JLabel();
+        userName = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,6 +80,62 @@ public class ThrowProf extends javax.swing.JFrame {
         });
         jPanel1.add(about);
         about.setBounds(270, 10, 41, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 10, 80, 40);
+
+        UserPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mask Group 7.jpg"))); // NOI18N
+        jPanel1.add(UserPic);
+        UserPic.setBounds(120, 180, 150, 150);
+
+        jLabel2.setText("User Name:");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(30, 380, 70, 16);
+
+        jLabel3.setText("Points:");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(30, 470, 70, 16);
+
+        jLabel4.setText("Password:");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(30, 430, 70, 16);
+
+        msg1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        msg1.setText("Congratulations!");
+        jPanel1.add(msg1);
+        msg1.setBounds(110, 530, 180, 50);
+
+        msg2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        msg2.setText("You Have Reached 100 Points!");
+        jPanel1.add(msg2);
+        msg2.setBounds(40, 590, 327, 29);
+
+        prizeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Points-1.jpg"))); // NOI18N
+        prizeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prizeButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(prizeButton);
+        prizeButton.setBounds(110, 650, 181, 69);
+
+        points.setText(" ");
+        jPanel1.add(points);
+        points.setBounds(120, 470, 90, 16);
+
+        password.setText(" ");
+        jPanel1.add(password);
+        password.setBounds(120, 430, 100, 16);
+
+        userName.setText(" ");
+        jPanel1.add(userName);
+        userName.setBounds(120, 380, 100, 20);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -108,6 +175,15 @@ public class ThrowProf extends javax.swing.JFrame {
        new Login().setVisible(true);
     }//GEN-LAST:event_signoutMouseClicked
 
+    private void prizeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prizeButtonMouseClicked
+       points.setText("0");
+    }//GEN-LAST:event_prizeButtonMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        this.dispose();
+        new ThrowMain().setVisible(true);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -142,13 +218,26 @@ public class ThrowProf extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel UserPic;
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel msg1;
+    private javax.swing.JLabel msg2;
+    private javax.swing.JLabel password;
+    private javax.swing.JLabel points;
+    private javax.swing.JLabel prizeButton;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;
+    private javax.swing.JLabel userName;
     // End of variables declaration//GEN-END:variables
 }

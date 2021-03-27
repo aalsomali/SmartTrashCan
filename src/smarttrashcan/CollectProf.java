@@ -32,6 +32,10 @@ public class CollectProf extends javax.swing.JFrame {
         contactUs = new javax.swing.JLabel();
         profile = new javax.swing.JLabel();
         signout = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        UserPic = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,6 +73,27 @@ public class CollectProf extends javax.swing.JFrame {
         });
         jPanel1.add(signout);
         signout.setBounds(160, 10, 49, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 10, 80, 40);
+
+        UserPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mask Group 7.jpg"))); // NOI18N
+        jPanel1.add(UserPic);
+        UserPic.setBounds(120, 180, 150, 150);
+
+        jLabel2.setText("User Name:");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(30, 380, 70, 16);
+
+        jLabel3.setText("Password:");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(30, 430, 70, 16);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -108,6 +133,11 @@ public class CollectProf extends javax.swing.JFrame {
        new Login().setVisible(true);
     }//GEN-LAST:event_signoutMouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        this.dispose();
+       new CollectMain().setVisible(true);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -144,9 +174,13 @@ public class CollectProf extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel UserPic;
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;

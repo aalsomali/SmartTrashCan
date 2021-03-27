@@ -14,6 +14,7 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    public int per = 50;
     public Login() {
         initComponents();
         errormsg.setVisible(false);
@@ -38,6 +39,7 @@ public class Login extends javax.swing.JFrame {
         UserPic = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,6 +97,15 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(contactUs);
         contactUs.setBounds(320, 10, 70, 30);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(20, 10, 80, 40);
+
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
         bg.setBounds(0, 0, 390, 844);
@@ -140,6 +151,11 @@ public class Login extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_loginButtonMouseClicked
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        this.dispose();
+       new MainPage().setVisible(true);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -184,6 +200,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel errormsg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel loginButton;
     private javax.swing.JPasswordField password;

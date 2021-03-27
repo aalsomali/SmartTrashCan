@@ -9,12 +9,12 @@ package smarttrashcan;
  *
  * @author milo
  */
-public class ContactUs extends javax.swing.JFrame {
+public class ScanComplete extends javax.swing.JFrame {
 
     /**
-     * Creates new form ContactUs
+     * Creates new form ScanComplete
      */
-    public ContactUs() {
+    public ScanComplete() {
         initComponents();
     }
 
@@ -28,33 +28,22 @@ public class ContactUs extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        about = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        about = new javax.swing.JLabel();
+        profile = new javax.swing.JLabel();
+        signout = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(390, 844));
         jPanel1.setLayout(null);
-
-        about.setText("About");
-        about.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aboutMouseClicked(evt);
-            }
-        });
-        jPanel1.add(about);
-        about.setBounds(270, 10, 41, 30);
 
         contactUs.setText("Contact Us");
         contactUs.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -65,53 +54,69 @@ public class ContactUs extends javax.swing.JFrame {
         jPanel1.add(contactUs);
         contactUs.setBounds(320, 10, 70, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        about.setText("About");
+        about.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                aboutMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 10, 80, 40);
+        jPanel1.add(about);
+        about.setBounds(270, 10, 41, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/instagram.jpg"))); // NOI18N
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jPanel1.add(profile);
+        profile.setBounds(220, 10, 41, 30);
+
+        signout.setText("Sign Out");
+        signout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signoutMouseClicked(evt);
+            }
+        });
+        jPanel1.add(signout);
+        signout.setBounds(160, 10, 49, 30);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 390, 38, 38);
+        jLabel2.setBounds(110, 180, 200, 190);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/follow.jpg"))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("QR Code Complete!");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(280, 390, 80, 30);
+        jLabel3.setBounds(90, 430, 220, 29);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/snapchat.jpg"))); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("You Got 5 Points Added ");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(40, 300, 38, 38);
+        jLabel4.setBounds(70, 470, 270, 29);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/twitter.jpg"))); // NOI18N
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 480, 40, 40);
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel5.setText("to Your Account.");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(110, 510, 190, 29);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel9.setText("@Smart_Treash_Can_");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(90, 400, 170, 20);
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel11.setText("@Smart_Treash_Can_");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(90, 490, 170, 20);
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel12.setText("@Smart_Treash_Can_");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(90, 310, 170, 20);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/follow.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Main.jpg"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(280, 490, 80, 30);
+        jLabel6.setBounds(100, 670, 180, 70);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/follow.jpg"))); // NOI18N
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(280, 300, 80, 30);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Points.jpg"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(100, 570, 180, 70);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -121,9 +126,7 @@ public class ContactUs extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,23 +138,38 @@ public class ContactUs extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void contactUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsMouseClicked
+        this.dispose();
+
+        new ContactUs().setVisible(true);
+    }//GEN-LAST:event_contactUsMouseClicked
+
     private void aboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseClicked
-       this.dispose();
-        
+        this.dispose();
+
         About a = new About();
         a.setVisible(true);
     }//GEN-LAST:event_aboutMouseClicked
 
-    private void contactUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsMouseClicked
-       this.dispose();
-        
-        new ContactUs().setVisible(true);
-    }//GEN-LAST:event_contactUsMouseClicked
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        this.dispose();
+        new ThrowProf().setVisible(true);
+    }//GEN-LAST:event_profileMouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void signoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signoutMouseClicked
+        this.dispose();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_signoutMouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
        this.dispose();
-       new MainPage().setVisible(true);
-    }//GEN-LAST:event_jLabel1MouseClicked
+        new ThrowMain().setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+       this.dispose();
+       new ThrowProf().setVisible(true);
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -170,20 +188,20 @@ public class ContactUs extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ContactUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanComplete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ContactUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanComplete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ContactUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanComplete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ContactUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanComplete.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ContactUs().setVisible(true);
+                new ScanComplete().setVisible(true);
             }
         });
     }
@@ -192,16 +210,14 @@ public class ContactUs extends javax.swing.JFrame {
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel profile;
+    private javax.swing.JLabel signout;
     // End of variables declaration//GEN-END:variables
 }

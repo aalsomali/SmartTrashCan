@@ -5,20 +5,17 @@
  */
 package smarttrashcan;
 
-import java.util.Random;
-
 /**
  *
  * @author milo
  */
-public class GrandMall extends javax.swing.JFrame {
+public class ScanCompleteC extends javax.swing.JFrame {
 
-   
-    int per;
-    
-    public GrandMall() {
+    /**
+     * Creates new form ScanCompleteC
+     */
+    public ScanCompleteC() {
         initComponents();
-        number.setText(String.valueOf(per));
     }
 
     /**
@@ -35,17 +32,9 @@ public class GrandMall extends javax.swing.JFrame {
         profile = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
-        mapIcon = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        locButton = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        number = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,59 +78,23 @@ public class GrandMall extends javax.swing.JFrame {
         jPanel1.add(contactUs);
         contactUs.setBounds(320, 10, 70, 30);
 
-        mapIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Mask Group 2.jpg"))); // NOI18N
-        jPanel1.add(mapIcon);
-        mapIcon.setBounds(30, 120, 50, 50);
-
-        jPanel2.setBackground(new java.awt.Color(240, 254, 222));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.setLayout(null);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel6.setText("Grand Mall");
-        jPanel2.add(jLabel6);
-        jLabel6.setBounds(20, 30, 110, 40);
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel7.setText("11 km");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(321, 40, 50, 20);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 210, 390, 100);
-
-        jPanel3.setPreferredSize(new java.awt.Dimension(390, 310));
-        jPanel3.setLayout(null);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Map.jpg"))); // NOI18N
-        jPanel3.add(jLabel8);
-        jLabel8.setBounds(0, 0, 390, 310);
-
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 340, 390, 310);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Fill Level:");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(10, 660, 70, 30);
+        jLabel2.setBounds(110, 180, 200, 190);
 
-        locButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/go to location.jpg"))); // NOI18N
-        jPanel1.add(locButton);
-        locButton.setBounds(100, 710, 180, 70);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("QR Code Complete!");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(20, 10, 80, 40);
+        jLabel3.setBounds(90, 430, 220, 29);
 
-        number.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        number.setText("90");
-        jPanel1.add(number);
-        number.setBounds(90, 660, 40, 30);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("%");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(140, 670, 41, 16);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Main.jpg"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(100, 560, 180, 70);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -186,6 +139,11 @@ public class GrandMall extends javax.swing.JFrame {
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        this.dispose();
+        new CollectMain().setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -203,26 +161,22 @@ public class GrandMall extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanCompleteC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanCompleteC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanCompleteC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GrandMall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScanCompleteC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GrandMall().setVisible(true);
+                new ScanCompleteC().setVisible(true);
             }
         });
-    }
-    
-    public void setPercent(int percent){
-        per = percent;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -231,16 +185,8 @@ public class GrandMall extends javax.swing.JFrame {
     private javax.swing.JLabel contactUs;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel locButton;
-    private javax.swing.JLabel mapIcon;
-    private javax.swing.JLabel number;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;
     // End of variables declaration//GEN-END:variables

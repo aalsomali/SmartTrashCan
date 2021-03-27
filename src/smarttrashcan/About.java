@@ -30,6 +30,15 @@ public class About extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         about = new javax.swing.JLabel();
         contactUs = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,6 +63,55 @@ public class About extends javax.swing.JFrame {
         });
         jPanel1.add(contactUs);
         contactUs.setBounds(320, 10, 70, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-arrow.jpg"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 10, 80, 40);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("This Application Allows You to Locate the");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(20, 250, 340, 22);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Nearest Smart Trash Can to Your Location.");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(20, 280, 340, 22);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setText("For Every Time You Throw Your Trash in");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(30, 310, 340, 22);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setText("One of the Smart Trashes, You Get 5 Points");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(20, 340, 360, 22);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("Added to Your Account.");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(100, 370, 200, 22);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setText("Welcome to \"Smart Trach Can\"");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 160, 380, 29);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Get a Prize!");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(150, 510, 100, 22);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("If You Collect 100 Points, You Will");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(50, 470, 290, 22);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -85,6 +143,11 @@ public class About extends javax.swing.JFrame {
        this.dispose();
         new ContactUs().setVisible(true);
     }//GEN-LAST:event_contactUsMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        this.dispose();
+        new MainPage().setVisible(true);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -125,6 +188,15 @@ public class About extends javax.swing.JFrame {
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,8 +14,10 @@ public class ThrowMain extends javax.swing.JFrame {
     /**
      * Creates new form ThrowMain
      */
+    int per;
     public ThrowMain() {
         initComponents();
+        
     }
 
     /**
@@ -34,16 +36,16 @@ public class ThrowMain extends javax.swing.JFrame {
         contactUs = new javax.swing.JLabel();
         about = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        HailMap = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        PrincePark = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        GrandMall = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        HailMall = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
@@ -98,73 +100,93 @@ public class ThrowMain extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(110, 130, 220, 50);
 
-        HailMap.setBackground(new java.awt.Color(240, 254, 222));
-        HailMap.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        HailMap.setLayout(null);
+        jPanel2.setBackground(new java.awt.Color(240, 254, 222));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
+        jPanel2.setLayout(null);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel4.setText("Hail General Hospital");
-        HailMap.add(jLabel4);
+        jPanel2.add(jLabel4);
         jLabel4.setBounds(20, 40, 180, 30);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel9.setText("4.6 km");
-        HailMap.add(jLabel9);
+        jPanel2.add(jLabel9);
         jLabel9.setBounds(321, 40, 50, 20);
 
-        jPanel1.add(HailMap);
-        HailMap.setBounds(0, 340, 390, 100);
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 320, 390, 100);
 
-        PrincePark.setBackground(new java.awt.Color(240, 254, 222));
-        PrincePark.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        PrincePark.setLayout(null);
+        jPanel3.setBackground(new java.awt.Color(240, 254, 222));
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
+        jPanel3.setLayout(null);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel5.setText("Prince Saud Bin Abdul Mohsen Park");
-        PrincePark.add(jLabel5);
+        jPanel3.add(jLabel5);
         jLabel5.setBounds(20, 20, 260, 50);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel8.setText("6.4 km");
-        PrincePark.add(jLabel8);
+        jPanel3.add(jLabel8);
         jLabel8.setBounds(321, 40, 50, 20);
 
-        jPanel1.add(PrincePark);
-        PrincePark.setBounds(0, 440, 390, 100);
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 420, 390, 100);
 
-        GrandMall.setBackground(new java.awt.Color(240, 254, 222));
-        GrandMall.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        GrandMall.setLayout(null);
+        jPanel4.setBackground(new java.awt.Color(240, 254, 222));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
+        jPanel4.setLayout(null);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel6.setText("Grand Mall");
-        GrandMall.add(jLabel6);
+        jPanel4.add(jLabel6);
         jLabel6.setBounds(20, 30, 110, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel7.setText("11 km");
-        GrandMall.add(jLabel7);
+        jPanel4.add(jLabel7);
         jLabel7.setBounds(321, 40, 50, 20);
 
-        jPanel1.add(GrandMall);
-        GrandMall.setBounds(0, 540, 390, 100);
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(0, 520, 390, 100);
 
-        HailMall.setBackground(new java.awt.Color(240, 254, 222));
-        HailMall.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        HailMall.setLayout(null);
+        jPanel5.setBackground(new java.awt.Color(240, 254, 222));
+        jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
+        jPanel5.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel3.setText("Hail Mall");
-        HailMall.add(jLabel3);
+        jPanel5.add(jLabel3);
         jLabel3.setBounds(20, 30, 100, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("2.1 km");
-        HailMall.add(jLabel2);
+        jPanel5.add(jLabel2);
         jLabel2.setBounds(321, 40, 50, 20);
 
-        jPanel1.add(HailMall);
-        HailMall.setBounds(0, 240, 390, 100);
+        jPanel1.add(jPanel5);
+        jPanel5.setBounds(0, 220, 390, 100);
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1.jpg"))); // NOI18N
         jPanel1.add(bg);
@@ -209,6 +231,26 @@ public class ThrowMain extends javax.swing.JFrame {
         new ThrowProf().setVisible(true);
     }//GEN-LAST:event_profileMouseClicked
 
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+       this.dispose();
+       new HailMall().setVisible(true);
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        this.dispose();
+       new HailHosp().setVisible(true);
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        this.dispose();
+       new PrincePark().setVisible(true);
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        this.dispose();
+       new GrandMall().setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -243,12 +285,12 @@ public class ThrowMain extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void setPercent(int percent){
+        per = percent;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel GrandMall;
-    private javax.swing.JPanel HailMall;
-    private javax.swing.JPanel HailMap;
-    private javax.swing.JPanel PrincePark;
     private javax.swing.JLabel about;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel contactUs;
@@ -262,6 +304,10 @@ public class ThrowMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel mapIcon;
     private javax.swing.JLabel profile;
     private javax.swing.JLabel signout;
